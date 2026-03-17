@@ -8,9 +8,23 @@ server:
   port: 8080
 
 anthropic:
+#  curl https://api.anthropic.com/v1/messages \
+#  --header "x-api-key: {API_KEY}" \
+#  --header "anthropic-version: 2023-06-01" \
+#  --header "content-type: application/json" \
+#  --data \
+#  '{
+#      "model": "claude-sonnet-4-20250514",
+#      "max_tokens": 1024,
+#      "messages": [
+#          {"role": "user", "content": "Hello, world"}
+#      ]
+#  }'
+
   api-key: ${ANTHROPIC_API_KEY:mock}   # ???? ??? mock ??
-  base-url: https://api.anthropic.com
+  base-url: https://api.anthropic.com/v1/messages
   model: claude-sonnet-4-20250514
+  version: 2023-06-01
   max-tokens: 1024
 
 logging:
