@@ -7,7 +7,7 @@ data class ClaudeRequest(
     var model:String,
     var messages: List<ClaudeMessage>,
     @JsonProperty("max_tokens")
-    var token: Int,
+    var maxTokens: Int,
     var stream: Boolean = true  //?
 )
 
@@ -21,7 +21,7 @@ data class ClaudeMessage(
 @JsonIgnoreProperties(ignoreUnknown = true)
 data class ClaudeStreamEvent(
     var type: String,
-    var content: ClaudeStream
+    var delta: ClaudeStream? = null
 )
 
 

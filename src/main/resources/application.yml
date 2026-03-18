@@ -22,12 +22,13 @@ anthropic:
 #  }'
 
   api-key: ${ANTHROPIC_API_KEY:mock}   # ???? ??? mock ??
-  base-url: https://api.anthropic.com/v1/messages
+  base-url: https://api.anthropic.com
   model: claude-sonnet-4-20250514
   version: 2023-06-01
   max-tokens: 1024
 
 logging:
   level:
-    com.streamchat: DEBUG
-    reactor.netty.http.client: INFO
+    com.aistreamchat: DEBUG
+    reactor.netty.http.client: DEBUG
+    org.springframework.web.reactive: DEBUG
